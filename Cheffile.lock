@@ -1,12 +1,20 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
+    apache2 (1.1.10)
     java (1.5.0)
     jenkins (0.6.3)
       java (>= 0.0.0)
       runit (>= 0.0.0)
     runit (0.15.0)
 
+PATH
+  remote: cookbooks-sources
+  specs:
+    hello_world (0.0.1)
+      apache2 (>= 0.0.0)
+
 DEPENDENCIES
+  hello_world (>= 0)
   jenkins (>= 0)
 

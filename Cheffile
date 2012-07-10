@@ -1,3 +1,4 @@
 site 'http://community.opscode.com/api/v1'
 
 cookbook 'jenkins'
+cookbook 'hello_world', path: 'cookbooks-sources'
