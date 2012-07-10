@@ -2,6 +2,7 @@ SITE
   remote: http://community.opscode.com/api/v1
   specs:
     apache2 (1.1.10)
+    apt (1.4.2)
     java (1.5.0)
     jenkins (0.6.3)
       java (>= 0.0.0)
@@ -15,6 +16,7 @@ PATH
       apache2 (>= 0.0.0)
 
 DEPENDENCIES
+  apt (>= 0)
   hello_world (>= 0)
   jenkins (>= 0)
 
