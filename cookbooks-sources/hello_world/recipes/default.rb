@@ -7,13 +7,17 @@
 # All rights reserved - Do Not Redistribute
 #
 
-directory "/srv/www/hello" do
+docroot = "/srv/www/hello_world"
+
+directory docroot do
   recursive true
 end
 
-cookbook_file "/srv/www/hello/index.html"
+cookbook_file "#{docroot}/index.html" do
+  mode 0644
+end
 
 web_app "hello_world" do
-  server_name node.cloud.public_dns_address
-  docroot "/srv/www/hello_world"
+  server_name node.cloud.public_hostname
+  docroot docroot
 end
